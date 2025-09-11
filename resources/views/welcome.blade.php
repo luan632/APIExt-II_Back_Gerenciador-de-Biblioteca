@@ -6,6 +6,22 @@
     <title>Biblioteca do Cristo - Laravel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* ===== VARIÁVEIS DE CORES ===== */
+        :root {
+            --primary: #ff7700;
+            --primary-dark: #e56a00;
+            --primary-light: #ffb347;
+            --accent: #fff8f0;
+            --accent-border: #ffe0c0;
+            --text-dark: #333;
+            --text-medium: #555;
+            --text-light: #777;
+            --white: #ffffff;
+            --shadow-light: rgba(0,0,0,0.1);
+            --shadow-primary: rgba(255, 119, 0, 0.2);
+        }
+        
+        /* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
         * {
             margin: 0;
             padding: 0;
@@ -14,18 +30,19 @@
         }
 
         body {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            color: #333;
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
+        /* ===== CABEÇALHO ===== */
         .header {
-            background-color: #fff;
+            background-color: var(--white);
             padding: 1.5rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px var(--shadow-light);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,23 +59,24 @@
         .logo-icon {
             width: 42px;
             height: 42px;
-            background: #ff7700;
+            background: var(--primary);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--white);
             font-size: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px var(--shadow-light);
         }
 
         .logo-text {
             font-size: 1.6rem;
             font-weight: 700;
-            color: #ff7700;
+            color: var(--primary);
             letter-spacing: -0.5px;
         }
 
+        /* ===== BOTÕES DE NAVEGAÇÃO ===== */
         .nav-buttons {
             display: flex;
             gap: 15px;
@@ -75,30 +93,31 @@
         }
 
         .btn-login {
-            color: #ff7700;
-            border: 2px solid #ff7700;
+            color: var(--primary);
+            border: 2px solid var(--primary);
             background: transparent;
         }
 
         .btn-login:hover {
-            background-color: #ff7700;
-            color: white;
+            background-color: var(--primary);
+            color: var(--white);
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(255, 119, 0, 0.2);
+            box-shadow: 0 4px 12px var(--shadow-primary);
         }
 
         .btn-register {
-            background-color: #ff7700;
-            color: white;
+            background-color: var(--primary);
+            color: var(--white);
             border: none;
         }
 
         .btn-register:hover {
-            background-color: #e56a00;
+            background-color: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 119, 0, 0.25);
         }
 
+        /* ===== CONTEÚDO PRINCIPAL ===== */
         .main-content {
             flex: 1;
             display: flex;
@@ -110,11 +129,11 @@
         }
 
         .welcome-card {
-            background: white;
+            background: var(--white);
             border-radius: 20px;
             padding: 3.5rem 3rem;
             box-shadow: 0 15px 50px rgba(0,0,0,0.08);
-            max-width: 700px;
+            max-width: 800px;
             width: 100%;
             margin: 2rem auto;
             position: relative;
@@ -128,25 +147,27 @@
             left: 0;
             width: 100%;
             height: 6px;
-            background: linear-gradient(90deg, #ff7700, #ffb347);
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
         }
 
+        /* ===== BADGE ADMINISTRATIVO ===== */
         .admin-badge {
             display: inline-block;
-            background: #fff8f0;
-            color: #ff7700;
+            background: var(--accent);
+            color: var(--primary);
             font-weight: 700;
             padding: 0.4rem 1.2rem;
             border-radius: 30px;
             font-size: 0.95rem;
             margin-bottom: 1.2rem;
-            border: 1px solid #ffe0c0;
+            border: 1px solid var(--accent-border);
             box-shadow: 0 2px 6px rgba(255, 119, 0, 0.1);
         }
 
+        /* ===== TIPOGRAFIA ===== */
         h1 {
             font-size: 2.6rem;
-            color: #ff7700;
+            color: var(--primary);
             margin-bottom: 0.5rem;
             font-weight: 700;
             letter-spacing: -1px;
@@ -154,15 +175,30 @@
 
         .subtitle {
             font-size: 1.25rem;
-            color: #555;
+            color: var(--text-medium);
             margin-bottom: 1.8rem;
             font-weight: 500;
         }
 
+        h2 {
+            font-size: 1.9rem;
+            color: var(--primary);
+            margin: 2rem 0 1.2rem;
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            margin-bottom: 2.2rem;
+            line-height: 1.7;
+        }
+
+        /* ===== DIVISOR ===== */
         .divider {
             height: 4px;
             width: 70px;
-            background: #ff7700;
+            background: var(--primary);
             margin: 1.8rem auto;
             border-radius: 2px;
             position: relative;
@@ -173,21 +209,15 @@
             position: absolute;
             width: 100%;
             height: 2px;
-            background: #ffb347;
+            background: var(--primary-light);
             top: 1px;
             left: 0;
         }
 
-        .description {
-            font-size: 1.15rem;
-            color: #555;
-            margin-bottom: 2.2rem;
-            line-height: 1.7;
-        }
-
+        /* ===== DESTAQUE ADMINISTRATIVO ===== */
         .admin-highlight {
-            background: #fff8f0;
-            border-left: 4px solid #ff7700;
+            background: var(--accent);
+            border-left: 4px solid var(--primary);
             padding: 1.5rem;
             border-radius: 12px;
             margin: 2rem 0;
@@ -202,21 +232,15 @@
         }
 
         .admin-highlight p strong {
-            color: #ff7700;
+            color: var(--primary);
         }
 
         .admin-highlight i {
-            color: #ff7700;
+            color: var(--primary);
             margin-right: 8px;
         }
 
-        h2 {
-            font-size: 1.9rem;
-            color: #ff7700;
-            margin: 2rem 0 1.2rem;
-            font-weight: 600;
-        }
-
+        /* ===== RECURSOS/CARACTERÍSTICAS ===== */
         .features {
             display: flex;
             justify-content: center;
@@ -227,13 +251,16 @@
 
         .feature {
             flex: 1;
-            min-width: 160px;
+            min-width: 200px;
             padding: 2rem 1.5rem;
-            background: #fff8f0;
+            background: var(--accent);
             border-radius: 16px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.04);
             transition: all 0.3s ease;
-            border: 1px solid #ffe0c0;
+            border: 1px solid var(--accent-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .feature:hover {
@@ -243,7 +270,7 @@
 
         .feature i {
             font-size: 2.6rem;
-            color: #ff7700;
+            color: var(--primary);
             margin-bottom: 1.1rem;
             display: block;
             transition: transform 0.3s ease;
@@ -254,29 +281,33 @@
         }
 
         .feature h3 {
-            color: #ff7700;
+            color: var(--primary);
             margin-bottom: 0.7rem;
             font-size: 1.25rem;
             font-weight: 600;
+            text-align: center;
         }
 
         .feature p {
             margin-bottom: 0;
             font-size: 0.95rem;
-            color: #777;
+            color: var(--text-light);
+            text-align: center;
         }
 
+        /* ===== RODAPÉ ===== */
         .footer {
             text-align: center;
             padding: 2rem;
-            background: #fff;
+            background: var(--white);
             border-top: 1px solid #f0f0f0;
-            color: #777;
+            color: var(--text-light);
             font-size: 0.95rem;
             margin-top: 2rem;
             box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
         }
 
+        /* ===== RESPONSIVIDADE ===== */
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -309,6 +340,10 @@
 
             .admin-highlight p {
                 font-size: 1rem;
+            }
+            
+            .feature {
+                min-width: 100%;
             }
         }
     </style>
