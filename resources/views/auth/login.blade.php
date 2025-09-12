@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Laranja e Branco</title>
+    <title>Login - Laranja e Azul</title>
     <style>
         * {
             margin: 0;
@@ -42,7 +42,7 @@
         }
 
         .login-header {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            background: #1a73e8; /* ✅ AZUL SOBRE O CABEÇALHO */
             color: white;
             text-align: center;
             padding: 40px 30px 30px;
@@ -70,7 +70,7 @@
 
         .form-label {
             display: block;
-            color: #333;
+            color: #1a73e8; /* ✅ Azul para labels */
             font-weight: 600;
             margin-bottom: 8px;
             font-size: 0.95rem;
@@ -79,18 +79,19 @@
         .form-input {
             width: 100%;
             padding: 14px 16px;
-            border: 2px solid #e5e5e5;
+            border: 2px solid #d1e5f7; /* ✅ Azul claro */
             border-radius: 12px;
             font-size: 1rem;
             transition: all 0.3s ease;
-            background: #fafafa;
+            background: #f8f9fa;
+            color: #1a73e8;
         }
 
         .form-input:focus {
             outline: none;
-            border-color: #ff6b35;
+            border-color: #1a73e8; /* ✅ Foco em azul */
             background: white;
-            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
         }
 
         .error-message {
@@ -109,7 +110,7 @@
             width: 18px;
             height: 18px;
             margin-right: 10px;
-            accent-color: #ff6b35;
+            accent-color: #1a73e8; /* ✅ Checkbox azul */
             cursor: pointer;
         }
 
@@ -129,7 +130,7 @@
         }
 
         .forgot-password {
-            color: #ff6b35;
+            color: #1a73e8; /* ✅ Link azul */
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
@@ -137,12 +138,12 @@
         }
 
         .forgot-password:hover {
-            color: #e55a2b;
+            color: #0d5cb6;
             text-decoration: underline;
         }
 
         .login-button {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            background: #1a73e8; /* ✅ Botão azul */
             color: white;
             border: none;
             padding: 14px 32px;
@@ -151,12 +152,12 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
         }
 
         .login-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 8px 25px rgba(26, 115, 232, 0.4);
         }
 
         .login-button:active {

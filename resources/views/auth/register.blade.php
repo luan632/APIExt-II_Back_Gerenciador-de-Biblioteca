@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Laranja e Branco</title>
+    <title>Registro - Laranja e Azul</title>
     <style>
         * {
             margin: 0;
@@ -42,7 +42,7 @@
         }
 
         .register-header {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            background: #1a73e8; /* Azul só no cabeçalho */
             color: white;
             text-align: center;
             padding: 35px 30px 25px;
@@ -58,6 +58,7 @@
         .register-header p {
             opacity: 0.9;
             font-size: 1rem;
+            color: white;
         }
 
         .register-form {
@@ -79,7 +80,7 @@
 
         .form-label {
             display: block;
-            color: #333;
+            color: #1a73e8;
             font-weight: 600;
             margin-bottom: 6px;
             font-size: 0.9rem;
@@ -88,18 +89,19 @@
         .form-input {
             width: 100%;
             padding: 12px 14px;
-            border: 2px solid #e5e5e5;
+            border: 2px solid #d1e5f7;
             border-radius: 10px;
             font-size: 0.95rem;
             transition: all 0.3s ease;
-            background: #fafafa;
+            background: #f8f9fa;
+            color: #1a73e8;
         }
 
         .form-input:focus {
             outline: none;
-            border-color: #ff6b35;
+            border-color: #1a73e8;
             background: white;
-            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
         }
 
         .error-message {
@@ -118,7 +120,7 @@
         }
 
         .login-link {
-            color: #ff6b35;
+            color: #1a73e8;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
@@ -126,12 +128,12 @@
         }
 
         .login-link:hover {
-            color: #e55a2b;
+            color: #0d5cb6;
             text-decoration: underline;
         }
 
         .register-button {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            background: #1a73e8;
             color: white;
             border: none;
             padding: 12px 28px;
@@ -140,12 +142,12 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
         }
 
         .register-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 8px 25px rgba(26, 115, 232, 0.4);
         }
 
         .register-button:active {
@@ -339,7 +341,7 @@
             if (passwordConfirm.value && password.value !== passwordConfirm.value) {
                 passwordConfirm.style.borderColor = '#e53e3e';
             } else {
-                passwordConfirm.style.borderColor = '#e5e5e5';
+                passwordConfirm.style.borderColor = '#d1e5f7';
             }
         }
 
