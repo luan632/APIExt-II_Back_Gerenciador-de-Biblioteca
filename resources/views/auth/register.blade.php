@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff8c42 100%);
+            background: linear-gradient(135deg, #ff8a5b 0%, #ffa726 50%, #ffab5e 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -24,7 +24,7 @@
         .register-container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 25px 50px rgba(255, 138, 91, 0.25);
             overflow: hidden;
             width: 100%;
             max-width: 500px;
@@ -38,14 +38,14 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(90deg, #ff6b35, #f7931e, #ff8c42);
+            background: linear-gradient(90deg, #ff8a5b, #ffa726, #ffab5e);
         }
 
         .register-header {
-            background: #1a73e8; /* Azul só no cabeçalho */
+            background: #1a73e8;
             color: white;
             text-align: center;
-            padding: 35px 30px 25px;
+            padding: 40px 30px 30px;
             position: relative;
         }
 
@@ -58,15 +58,14 @@
         .register-header p {
             opacity: 0.9;
             font-size: 1rem;
-            color: white;
         }
 
         .register-form {
-            padding: 35px 30px;
+            padding: 40px 30px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-row {
@@ -82,16 +81,16 @@
             display: block;
             color: #1a73e8;
             font-weight: 600;
-            margin-bottom: 6px;
-            font-size: 0.9rem;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
         }
 
         .form-input {
             width: 100%;
-            padding: 12px 14px;
+            padding: 14px 16px;
             border: 2px solid #d1e5f7;
-            border-radius: 10px;
-            font-size: 0.95rem;
+            border-radius: 12px;
+            font-size: 1rem;
             transition: all 0.3s ease;
             background: #f8f9fa;
             color: #1a73e8;
@@ -106,8 +105,8 @@
 
         .error-message {
             color: #e53e3e;
-            font-size: 0.8rem;
-            margin-top: 5px;
+            font-size: 0.875rem;
+            margin-top: 6px;
         }
 
         .form-actions {
@@ -116,7 +115,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
         .login-link {
@@ -136,9 +135,9 @@
             background: #1a73e8;
             color: white;
             border: none;
-            padding: 12px 28px;
-            border-radius: 10px;
-            font-size: 0.95rem;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -154,6 +153,16 @@
             transform: translateY(0);
         }
 
+        .status-message {
+            background: #e6fffa;
+            border: 1px solid #38d9a9;
+            color: #087f5b;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
         /* Responsividade */
         @media (max-width: 600px) {
             .register-container {
@@ -162,7 +171,7 @@
             }
 
             .register-header {
-                padding: 25px 20px 20px;
+                padding: 30px 20px 20px;
             }
 
             .register-header h1 {
@@ -170,7 +179,7 @@
             }
 
             .register-form {
-                padding: 25px 20px;
+                padding: 30px 20px;
             }
 
             .form-row {
@@ -191,12 +200,7 @@
 
         @media (max-width: 480px) {
             .form-input {
-                padding: 11px 12px;
-                font-size: 0.9rem;
-            }
-            
-            .form-label {
-                font-size: 0.85rem;
+                padding: 12px 14px;
             }
         }
     </style>
@@ -210,6 +214,11 @@
 
         <form class="register-form" method="POST" action="{{ route('register') }}">
             @csrf
+
+            <!-- Status Message -->
+            <div class="status-message" style="display: none;">
+                Mensagem de status aqui
+            </div>
 
             <!-- Name -->
             <div class="form-group">
@@ -325,7 +334,7 @@
         // Efeito visual nos inputs
         document.querySelectorAll('.form-input').forEach(input => {
             input.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'translateY(-1px)';
+                this.parentElement.style.transform = 'translateY(-2px)';
             });
             
             input.addEventListener('blur', function() {

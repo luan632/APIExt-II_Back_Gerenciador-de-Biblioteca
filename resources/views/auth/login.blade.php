@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff8c42 100%);
+            background: linear-gradient(135deg, #ff8a5b 0%, #ffa726 50%, #ffab5e 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -24,7 +24,7 @@
         .login-container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 25px 50px rgba(255, 138, 91, 0.25);
             overflow: hidden;
             width: 100%;
             max-width: 450px;
@@ -38,7 +38,7 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(90deg, #ff6b35, #f7931e, #ff8c42);
+            background: linear-gradient(90deg, #ff8a5b, #ffa726, #ffab5e);
         }
 
         .login-header {
