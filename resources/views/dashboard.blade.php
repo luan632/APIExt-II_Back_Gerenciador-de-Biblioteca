@@ -636,7 +636,10 @@
             // Fechar modal ao pressionar ESC
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
-                    openModal = false;
+                    const modal = document.querySelector('[x-show="openModal"]');
+                    if (modal && modal.style.display !== 'none') {
+                        Alpine.store('openModal', false);
+                    }
                 }
             });
         });
